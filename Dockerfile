@@ -16,3 +16,12 @@ RUN cd libgd-2.1.1 && \
     make install
 
 RUN find /usr/lib . | grep libgd.*\.so
+
+RUN wget http://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz && \
+    mkdir ffmpeg && \
+    tar xf ffmpeg-release-64bit-static.tar.xz -C ffmpeg --strip-components=1 && \
+    rm ffmpeg-release-64bit-static.tar.xz
+
+RUN rm -r libgd-2.1.1
+
+RUN find .
