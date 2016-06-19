@@ -34,4 +34,4 @@ RUN apt-get -qqy install wget make && \
     make install && \
     rm /etc/nginx/conf/nginx.conf
 
-RUN dnu restore
+RUN dotnet restore
