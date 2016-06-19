@@ -1,4 +1,4 @@
-FROM microsoft/aspnet:latest
+FROM microsoft/dotnet:latest
 
 COPY . /.bootstrap/
 WORKDIR /.bootstrap
