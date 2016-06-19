@@ -4,7 +4,7 @@ COPY . /.bootstrap/
 WORKDIR /.bootstrap
 
 RUN apt-get update && \
-    apt-get install -y cmake nasm wget git g++
+    apt-get install -y cmake nasm wget git g++ xz-utils
 
 RUN wget https://github.com/libgd/libgd/releases/download/gd-2.1.1/libgd-2.1.1.tar.gz && \
     tar -xvzf libgd-2.1.1.tar.gz && \
